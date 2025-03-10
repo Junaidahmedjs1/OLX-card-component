@@ -1,7 +1,9 @@
 import React from "react";
 
-const Btn = ({ text }) => {
+const Btn = ({ text , func }) => {
   const btnStyle = {
+    margin: '10px',
+    textAlign: "center",
     backgroundColor: "#e74c3c",
     color: "#fff",
     padding: "10px 20px",
@@ -10,11 +12,10 @@ const Btn = ({ text }) => {
     cursor: "pointer",
     fontSize: "18px",
     fontWeight: "bold",
-    display: "flex"
   };
 
   return (
-    <button style={btnStyle} >
+    <button onClick={func} style={btnStyle} >
       {text}
     </button>
   );
